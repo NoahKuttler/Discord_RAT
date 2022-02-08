@@ -118,6 +118,8 @@ def volumedown():
 
 @client.event
 async def on_message(message):
+    import ctypes
+    
     global stop_threads
     global pid_process
     global idle1
